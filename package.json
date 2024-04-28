@@ -1,0 +1,28 @@
+{
+  "name": "stateobservableclass",
+  "version": "0.1.0",
+  "description": "State observable class for React",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rychu-Pawel/StateObservableClass.git"
+  },
+  "keywords": [
+    "Class",
+    "State",
+    "Observer",
+    "Observable",
+    "Object",
+    "React",
+    "Hook"
+  ],
+  "author": "Rychu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rychu-Pawel/StateObservableClass/issues"
+  },
+  "homepage": "https://github.com/Rychu-Pawel/StateObservableClass#readme"
+}
