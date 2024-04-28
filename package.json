@@ -1,6 +1,6 @@
 {
     "name": "state-observable-class",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "State observable class for React",
     "repository": {
         "type": "git",
