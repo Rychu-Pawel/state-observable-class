@@ -2,7 +2,7 @@ import { useSyncExternalStore } from "react";
 
 import StateObservableClassBase from "./stateObservableClassBase.js";
 
-export default function useStateObservableClass(stateObservableClass: StateObservableClassBase<unknown>) {
+export default function useStateObservableClass<T>(stateObservableClass: StateObservableClassBase<T>): T {
     return useSyncExternalStore(callback => subscribe(callback, stateObservableClass), () => stateObservableClass.getStateSnapshot());
 }
 
