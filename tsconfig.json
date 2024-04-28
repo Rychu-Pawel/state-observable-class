@@ -1,6 +1,7 @@
 {
     "extends": "@tsconfig/node20/tsconfig.json",
     "compilerOptions": {
+        "lib": ["es2023", "dom"],
         "sourceMap": true,
         "jsx": "react",
         "pretty": true,
