@@ -1,8 +1,8 @@
 # state-observable-class
 
- state-observable-class is an NPM package that enables the creation of reactive React components by observing state changes in custom classes. 
- 
- This package provides a hook `useStateObservableClass` that automatically refreshes React components when the state in the observed class changes.
+The `state-observable-class` is an NPM package designed to facilitate the creation of reactive React components. 
+
+It does so by providing `useStateObservableClass` hook which observes changes in the state of custom classes and automatically refreshing the React components when any state changes occur.
 
 ## Requirements
 
@@ -18,18 +18,18 @@ npm install state-observable-class
 
 ## Live demo
 
-For a complete example of how to use this package, please refer to the provided CodeSandbox project here:
+For a practical demonstration of how to use this package, please refer to the CodeSandbox project provided here:
 [State Observable Class Example](https://codesandbox.io/p/sandbox/state-observable-class-kpkltn)
 
 ## Usage
 
-A class that can be observed by the hook need to follow a few rules:
-* It has to extends `StateObservableClassBase` which is delivered in this package
-* It has to pass it's initial state to the `super()` in its constructor
-* An interface or a type describing the state is needed
-* It has to update its state by calling `this.updateState({ changedProperty: 'value' })`. The method comes from the base class.
+To be observed by the `useStateObservableClass` hook, a class must adhere to the following rules:
+* It must extend `StateObservableClassBase`, which is included in this package.
+* It must pass its initial state to super() in its constructor.
+* An interface or type describing the state should be defined.
+* It should update its state by calling this.updateState({ changedProperty: 'newValue' }), a method inherited from the base class.
 
-An example of such a class can look as follows:
+Here is an example of how such a class might be structured:
 
 ```typescript
 import { StateObservableClassBase } from "state-observable-class";
