@@ -1,28 +1,66 @@
 {
-  "name": "stateobservableclass",
-  "version": "0.1.0",
-  "description": "State observable class for React",
-  "main": "build/index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rychu-Pawel/StateObservableClass.git"
-  },
-  "keywords": [
-    "Class",
-    "State",
-    "Observer",
-    "Observable",
-    "Object",
-    "React",
-    "Hook"
-  ],
-  "author": "Rychu",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Rychu-Pawel/StateObservableClass/issues"
-  },
-  "homepage": "https://github.com/Rychu-Pawel/StateObservableClass#readme"
+    "name": "state-observable-class",
+    "version": "0.1.0",
+    "description": "State observable class for React",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Rychu-Pawel/StateObservableClass.git"
+    },
+    "keywords": [
+        "React",
+        "Class",
+        "State",
+        "Observer",
+        "Observable",
+        "Object",
+        "Hook"
+    ],
+    "author": "Rychu",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Rychu-Pawel/StateObservableClass/issues"
+    },
+    "homepage": "https://github.com/Rychu-Pawel/StateObservableClass#readme",
+    "main": "dist/src/index.js",
+    "type": "module",
+    "files": [
+        "dist/src"
+    ],
+    "scripts": {
+        "test": "yarn build && ava",
+        "test:ci": "ava --tap",
+        "eslint": "eslint src test",
+        "eslint:ci": "yarn eslint",
+        "clean": "del-cli --force dist",
+        "build": "npm run clean && tsc",
+        "build:ci": "npm run build"
+    },
+    "peerDependencies": {
+        "react": ">=18.0.0"
+    },
+    "peerDependenciesMeta": {
+        "react": {
+            "optional": false
+        }
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "^20",
+        "@types/react": "^18.3.1",
+        "@typescript-eslint/eslint-plugin": "^7.1.1",
+        "@typescript-eslint/parser": "^7.1.1",
+        "ava": "^6.0.0",
+        "del-cli": "^5.0.0",
+        "eslint": "^8.0.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "react": "^18.0.0"
+    },
+    "ava": {
+        "files": [
+            "dist/test/**/*.spec.js"
+        ]
+    }
 }

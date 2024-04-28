@@ -1,0 +1,120 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "quotes": [
+            "error",
+            "backtick"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "eol-last": "off",
+        "nonblock-statement-body-position": [
+            "error",
+            "below"
+        ],
+        "curly": [
+            "error",
+            "multi-or-nest"
+        ],
+        "max-len": [
+            "off"
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages"
+        ],
+        "import/no-unresolved": "off",
+        "class-methods-use-this": "off",
+        "no-continue": "off",
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true
+            }
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ImportDeclaration": "never",
+                "ExportDeclaration": "never"
+            }
+        ],
+        "brace-style": [
+            "error",
+            "stroustrup"
+        ],
+        "arrow-parens": [
+            "error",
+            "as-needed"
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "ForInStatement",
+                "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+            },
+            {
+                "selector": "LabeledStatement",
+                "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            },
+            {
+                "selector": "WithStatement",
+                "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            }
+        ],
+        "prefer-destructuring": "off",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error",
+        "no-return-await": "off",
+        "no-use-before-define": [
+            "error",
+            {
+                "functions": false,
+                "classes": false,
+                "variables": true,
+                "allowNamedExports": false
+            }
+        ],
+        "no-return-assign": [
+            "error",
+            "except-parens"
+        ],
+        "no-console": "off",
+        "no-param-reassign": "off",
+        "linebreak-style": "off"
+    }
+}

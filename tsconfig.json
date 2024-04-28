@@ -1,0 +1,25 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "sourceMap": true,
+        "jsx": "react",
+        "pretty": true,
+        "stripInternal": true,
+        "noImplicitThis": true,
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "baseUrl": ".",
+        "outDir": "dist",
+        "declaration": true,
+        "strictNullChecks": true,
+        "exactOptionalPropertyTypes": false,
+        "noPropertyAccessFromIndexSignature": false, // this conflicts with ESLint dot-notation rule
+    },
+    "include": [
+        "src/**/*",
+        "test/**/*"
+    ],
+    "exclude": [
+        "dist"
+    ]
+}
